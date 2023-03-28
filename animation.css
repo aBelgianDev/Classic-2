@@ -1,0 +1,180 @@
+#header {
+    animation-name: slide-up-to-down-apparition;
+    animation-duration: 2s;
+}
+
+#section-1 .left-container .description h1,
+#section-1 .left-container .description p,
+#section-1 .left-container .description .btn-container a {
+    opacity: 0;
+}
+
+
+#section-1 .left-container .description.is-inview h1,
+#section-1 .left-container .description.is-inview p,
+#section-1 .left-container .description.is-inview .btn-container a {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+#section-1 .left-container .description.is-inview p {
+    transition-delay: 0.3s;
+}
+
+#section-1 .left-container .description.is-inview .btn-container a {
+    transition-delay: 0.6s;
+}
+
+#section-1 .tiles div {
+    animation-name: slide-up-to-down-apparition;
+    animation-duration: 2s;
+
+}
+
+#section-2 .left-container .spec {
+    opacity: 0;
+    transform: translateX(-1000px);
+}
+
+#section-2 .left-container.is-inview .spec {
+    animation-name: slide-left-to-right-apparition;
+    animation-duration: 2s;
+    transform: translateX(0px);
+    animation-fill-mode: forwards;
+}
+
+#section-2 .left-container.is-inview .spec:nth-child(1) {
+    animation-delay: 0s;
+}
+
+#section-2 .left-container.is-inview .spec:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+#section-2 .left-container.is-inview .spec:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+#section-3 .top-container .card .presentation.is-inview  {
+    animation-name: slide-up-to-down-apparition;
+    animation-duration: 2s;
+}
+
+#section-4 .container:nth-child(1).is-inview {
+    animation-name: slide-left-to-right-apparition;
+    animation-duration: 2s;
+}
+
+#section-4 .container:nth-child(2).is-inview {
+    animation-name: slide-right-to-left-apparition;
+    animation-duration: 2s;
+}
+
+#section-4 .container:nth-child(3).is-inview {
+    animation-name: fold-left-to-right-apparition;
+    animation-duration: 2s;
+}
+
+#section-4 .container:nth-child(4).is-inview {
+    animation-name: slide-right-to-left-apparition;
+    animation-duration: 2s;
+}
+
+#section-5 .bottom-container .left-container.is-inview .image {
+    animation-name: inflate-left-to-right-apparition;
+    animation-duration: 2s;
+}
+
+
+#section-6 .right-container.is-inview .image {
+    animation-name: inflate-right-to-left-apparition;
+    animation-duration: 2s;
+}
+
+/* hover-effects */
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+@keyframes slide-up-to-down-apparition {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+  }
+
+@keyframes slide-left-to-right-apparition {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+
+  @keyframes slide-right-to-left-apparition {
+    from {
+        transform: translateX(+100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+
+  @keyframes fold-left-to-right-apparition {
+    from {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    to {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+  }
+
+  @keyframes inflate-left-to-right-apparition {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+  }
+
+  @keyframes inflate-right-to-left-apparition {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+  }
