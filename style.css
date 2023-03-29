@@ -52,7 +52,7 @@ h1 {
     padding-left: 8%;
     padding-right: 8%;
     margin-bottom: 60px;
-    border: 1px solid rgb(184, 214, 135);
+    /* border: 1px solid rgb(184, 214, 135); */
     justify-content: space-evenly;
 }
 
@@ -111,7 +111,6 @@ h1 {
     background-color: white;
     z-index: 10;
     top: 0;
-    /* display: none; */
 }
 
 #header #logo {
@@ -119,7 +118,6 @@ h1 {
 }
 
 #header #navbar {
-    display: flex;
     width: 40%;
     justify-content: space-between;
     margin-right: 10%;
