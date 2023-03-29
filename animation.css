@@ -91,8 +91,13 @@
     animation-duration: 2s;
 }
 
-/* hover-effects */
+#section-7 .bottom-container.is-inview .presentation {
+    animation-name: slide-left-to-right-apparition;
+    animation-duration: 2s;
+}
 
+
+/* hover-effects */
 .hover-underline-animation {
     display: inline-block;
     position: relative;
