@@ -1,31 +1,56 @@
 * {
     margin: 0;
     padding: 0;
-    /* border: 1px solid rgb(135, 160, 214); */
+    /* border: 1px solid rgb(184, 214, 135); */
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     list-style-type: none;
 }
 
+p {
+    font-size: 3vw;
+}
+
+a {
+    font-size: 3vw;
+}
+
 h1 {
-    font-size: 3rem;
+    font-size: 6vw;
+}
+
+h2 {
+    font-size: 5vw;
+}
+
+h3 {
+    font-size: 4vw;
+}
+
+h1 {
     font-weight: 500;
+}
+
+.page {
+    width: 100vw;
+    overflow: hidden;
 }
 
 .c-scrollbar {
     z-index: 6;
+    display: none;
 }
 
 .sections {
-    height: 100vh;
-    min-height: 700px;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     padding-left: 8%;
     padding-right: 8%;
+    margin-bottom: 8%;
 }
 
 .btn-container {
-    margin-top: 25px;
     width: fit-content;
     height: fit-content;
 }
@@ -80,6 +105,7 @@ h1 {
     background-color: white;
     z-index: 10;
     top: 0;
+    display: none;
 }
 
 #header #logo {
@@ -104,13 +130,12 @@ h1 {
 #section-1 .left-container {
     width: 100%;
     height: 50%;
-    margin-top: 10%;
-    align-items: flex-end;
     transform: translateY(0) !important;
+    align-items: center;
+    justify-content: center;
 }
 
 #section-1 .left-container .description {
-    width: 50%;
     display: flex;
     flex-direction: column;
 }
@@ -158,21 +183,49 @@ h1 {
 }
 
 #section-2 {
-    align-items: center;
-    justify-content: space-between;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+#section-2 .content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    height: 760px;
+    width: 370px;
+    margin: 0 auto; 
 }
 
 #section-2 .left-container {
     flex-direction: column;
     text-align: center;
+    z-index: 1;
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 6%;
+    height: 80%;
+
 }
 
 #section-2 .right-container {
     flex-direction: column;
     text-align: center;
-    height: 100%;
     align-items: center;
     justify-content: center;
+    z-index: 1;
+    position: absolute;
+    width: 80%;
+    float: right;
+    height: 15%;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #section-2 .left-container * {
@@ -181,14 +234,36 @@ h1 {
 
 #section-2 .phone {
     align-self: flex-end;
-    height: 100%;
+    height: 760px;
+    width: 370px;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #section-2 .phone img {
-    max-height: 80%;
+    height: 100%;
+}
+
+#section-2 .spec {
+    border-radius: 15px;
+    border: 1px solid #EEF2F5;
+    margin-bottom: 5px;
+    background-color: white;
+    height: 165px;
+    width: 290px;
+}
+
+#section-2 .right-container .informations {
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid #EEF2F5;
+    height: 165px;
+    width: 290px;
 }
 
 #section-2 .spec, #section-2 .informations p {
@@ -222,16 +297,10 @@ h1 {
 #section-3 .top-container .card {
     display: flex;
     flex-direction: column;
-    height: 90%;
-    width: 30%;
-    min-width: 30%;
+    min-width: 290px;
     margin-left: 30px;
     margin-right: 30px;
 
-}
-
-#section-3 .top-container .card .presentation {
-    margin-top: 20px;
 }
 
 #section-3 .top-container .card .presentation * {
@@ -245,11 +314,15 @@ h1 {
 
 #section-3 .top-container .card .thumbnail {
     height: 60%;
-    min-height: 285px;
+    min-height: 170px;
     background-color: #EEF2F5;
 }
 
 #section-3 .bottom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     background-color: #F8F9FB;
     height: 40%;
     padding: 20px 10%;
@@ -257,9 +330,7 @@ h1 {
 
 #section-3 .bottom-container .left-container,
 #section-3 .bottom-container .right-container {
-    width: 30%;
-    max-width: 30%;
-    flex-grow: 2;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -271,7 +342,6 @@ h1 {
 }
 
 #section-3 .bottom-container .presentation p {
-    margin-top: 20px;
     font-weight: 300;
     font-size: 0.9;
 }
@@ -279,27 +349,25 @@ h1 {
 #section-3 .mid-container {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    height: 100%;
+    width: 100%;
     align-items: center;
     justify-content: center;
     text-align: center;
+    display: none;
 }
 
 #section-4 {
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+    height: auto;
 }
 
 #section-4 .container {
-    max-width: 580px;
-    min-width: 560px;
-    min-height: 45%;
-    max-height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 15px;
 }
 
 #section-4 .container * {
@@ -312,11 +380,10 @@ h1 {
 
 #section-5 {
     flex-direction: column;
-    padding: 0;
+    height: auto;
 }
 
 #section-5 .top-container {
-    height: 300px;
     width: 100%;
     flex-direction: column;
     background-color: #F8F9FB;
@@ -329,14 +396,18 @@ h1 {
     width: 100%;
     justify-content: center;
     align-items: center;
-    padding: 25px 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #section-5 .top-container .paragraphs {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 #section-5 .top-container .paragraphs div {
@@ -344,18 +415,16 @@ h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 30%;
-    margin: 0px 15px;
+    margin-bottom: 10px;
 }
 
 #section-5 .bottom-container {
-    height: 70%;
+    flex-direction: column;
 }
 
 #section-5 .bottom-container .left-container {
-    width: 50%;
-    max-width: 50%;
-    height: 100%;
+    width: 100%;
+    height: 200px;
     align-items: flex-start;
     justify-content: flex-start;
 }
@@ -368,9 +437,7 @@ h1 {
 }
 
 #section-5 .bottom-container .right-container {
-    height: 100%;
-    width: 50%;
-    max-width: 50%;
+    width: 100%;
     flex-direction: column;
     align-items: center;
 }
@@ -381,8 +448,6 @@ h1 {
 
 #section-5 .bottom-container .right-container .icon-container {
     display: flex;
-    flex-wrap: wrap;
-    width: 50%;
     max-width: 310px;
     align-items: center;
     justify-content: space-around;
@@ -390,8 +455,8 @@ h1 {
 }
 
 #section-5 .bottom-container .right-container .icon-container .icon {
-    width: 150px;
-    height: 150px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -400,19 +465,20 @@ h1 {
 
 #section-6 {
     flex-direction: column;
-    padding: 0;
+    height: auto;
 }
 
 #section-6 .content {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 70%;
+    height: auto;
 }
 
 #section-6 .right-container {
-    width: 50vw;
-    max-width: 50%;
-    height: 100%;
+    order: 1;
+    width: 100%;
+    height: 200px;
     align-items: flex-end;
     justify-content: flex-end;
 }
@@ -425,8 +491,7 @@ h1 {
 }
 
 #section-6 .left-container {
-    width: 50%;
-    max-width: 50%;
+    order: 2;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -444,14 +509,21 @@ h1 {
 
 #section-7 {
     flex-direction: column;
+    height: auto;
 }
 
 #section-7 .content {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 70%;
+    height: auto;
     align-items: center;
     justify-content: center;
+}
+
+#section-7 .content .card h2,
+#section-7 .content .card h3 {
+    writing-mode: vertical-lr;
 }
 
 #section-7 .content .card {
@@ -461,6 +533,12 @@ h1 {
     text-align: center;
     margin: 5px;
     box-shadow: 0px 0px 15px #a3a8ac5d;
+    display: flex;
+    flex-direction: column;
+}
+
+#section-7 .content .card .card-content {
+    display: flex;
 }
 
 #section-7 .content .card li {
@@ -479,16 +557,11 @@ h1 {
 }
 
 #section-7 .bottom-container {
-    height: 30%;
     justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
 }
 
 #section-7 .bottom-container .presentation {
-    width: 20%;
-    padding-right: 25px;
-}
-
-#section-7 .bottom-container .presentation:nth-child(1) {
-    width: 40%;
-    padding-right: 50px;
+    margin-bottom: 15px;
 }
