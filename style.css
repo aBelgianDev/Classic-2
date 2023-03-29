@@ -18,9 +18,56 @@ h1 {
 
 .sections {
     height: 100vh;
+    min-height: 700px;
     display: flex;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.btn-container {
+    margin-top: 25px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.btn-container a {
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #A3A8AC;
+    color: black;
+    background-color: white;
+}
+
+.btn-container a:hover {
+    background-color: #4378AC;
+    color: white;
+}
+
+.btn-container a:nth-child(1) {
+    background-color: #4378AC;
+    color: white;
+}
+
+.description p {
+    margin-top: 20px;
+}
+
+.copyright {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #455562;
+    padding: 15px;
+    color: white;
+}
+
+.top-container,
+.left-container,
+.right-container,
+.bottom-container {
+    display: flex;
 }
 
 #header {
@@ -58,7 +105,6 @@ h1 {
     width: 100%;
     height: 50%;
     margin-top: 10%;
-    display: flex;
     align-items: flex-end;
     transform: translateY(0) !important;
 }
@@ -69,31 +115,6 @@ h1 {
     flex-direction: column;
 }
 
-.btn-container {
-    margin-top: 25px;
-    width: fit-content;
-    height: fit-content;
-}
-
-.btn-container a {
-    padding: 5px 15px 5px 15px;
-    border-radius: 5px;
-    border: none;
-    border: 1px solid #A3A8AC;
-    color: black;
-    background-color: white;
-}
-
-.btn-container a:hover {
-    background-color: #4378AC;
-    color: white;
-}
-
-.btn-container a:nth-child(1) {
-    background-color: #4378AC;
-    color: white;
-}
-
 #section-1 .left-container .description p {
     font-weight: 300;
     font-size: 0.9;
@@ -102,20 +123,21 @@ h1 {
 
 #section-1 .right-container {
     width: 100%;
-    display: flex;
     justify-content: end;
 }
 
 #section-1 .tiles {
     transform: skew(293deg, 30deg);
     width: fit-content;
-    margin-right: 10vw;
+    margin-right: 10%;
 }
 
 #section-1 .tiles div {
     display: flex;
-    height: 115px;
-    width: 415px;
+    height: 12vh;
+    width: 40vh;
+    max-height: 115px;
+    max-width: 415px;
     border-radius: 5px;
     box-shadow: 3px 1px 0px #A3A8AC;
     background-color: #EEF2F5;
@@ -141,14 +163,11 @@ h1 {
 }
 
 #section-2 .left-container {
-    display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-
 #section-2 .right-container {
-    display: flex;
     flex-direction: column;
     text-align: center;
     height: 100%;
@@ -195,19 +214,17 @@ h1 {
 }
 
 #section-3 .top-container {
-    display: flex;
-    height: 60vh;
+    height: 60%;
     width: 100%;
     align-items: center;
 }
 
-
 #section-3 .top-container .card {
     display: flex;
     flex-direction: column;
-    height: 50vh;
-    width: 55vh;
-    min-width: 55vh;
+    height: 90%;
+    width: 30%;
+    min-width: 30%;
     margin-left: 30px;
     margin-right: 30px;
 
@@ -228,19 +245,18 @@ h1 {
 
 #section-3 .top-container .card .thumbnail {
     height: 60%;
+    min-height: 285px;
     background-color: #EEF2F5;
 }
 
 #section-3 .bottom-container {
-    display: flex;
     background-color: #F8F9FB;
-    height: 40vh;
-    padding: 20px 10vw;;
+    height: 40%;
+    padding: 20px 10%;
 }
 
 #section-3 .bottom-container .left-container,
 #section-3 .bottom-container .right-container {
-    display: flex;
     width: 30%;
     max-width: 30%;
     flex-grow: 2;
@@ -302,7 +318,6 @@ h1 {
 #section-5 .top-container {
     height: 300px;
     width: 100%;
-    display: flex;
     flex-direction: column;
     background-color: #F8F9FB;
     justify-content: center;
@@ -324,7 +339,6 @@ h1 {
     align-items: center;
 }
 
-
 #section-5 .top-container .paragraphs div {
     display: flex;
     justify-content: center;
@@ -335,14 +349,11 @@ h1 {
 }
 
 #section-5 .bottom-container {
-    display: flex;
-    width: 100%;
     height: 70%;
 }
 
 #section-5 .bottom-container .left-container {
-    display: flex;
-    width: 50vw;
+    width: 50%;
     max-width: 50%;
     height: 100%;
     align-items: flex-start;
@@ -357,29 +368,26 @@ h1 {
 }
 
 #section-5 .bottom-container .right-container {
-    display: flex;
     height: 100%;
-    width: 50vw;
+    width: 50%;
     max-width: 50%;
     flex-direction: column;
     align-items: center;
 }
 
-
 #section-5 .bottom-container .right-container .description {
-    margin-top: 50px;
+    margin-top: 5%;
 }
 
 #section-5 .bottom-container .right-container .icon-container {
     display: flex;
     flex-wrap: wrap;
-    width:50%;
+    width: 50%;
     max-width: 310px;
     align-items: center;
     justify-content: space-around;
-    margin-top: 50px;
+    margin-top: 5%;
 }
-
 
 #section-5 .bottom-container .right-container .icon-container .icon {
     width: 150px;
@@ -395,7 +403,6 @@ h1 {
     padding: 0;
 }
 
-
 #section-6 .content {
     display: flex;
     width: 100%;
@@ -403,7 +410,6 @@ h1 {
 }
 
 #section-6 .right-container {
-    display: flex;
     width: 50vw;
     max-width: 50%;
     height: 100%;
@@ -419,36 +425,22 @@ h1 {
 }
 
 #section-6 .left-container {
-    display: flex;
-    height: 100%;
-    width: 50vw;
+    width: 50%;
     max-width: 50%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-
-#section-6 .left-container .description {
-    margin-top: 50px;
-}
-
 #section-6 .bottom-container {
-    display: flex;
-    width: 100%;
     height: 30%;
     align-items: center;
     justify-content: center;
 }
 
-.description p {
-    margin-top: 20px;
-}
-
 #section-6 .bottom-container .description {
     text-align: center;
 }
-
 
 #section-7 {
     flex-direction: column;
@@ -487,8 +479,6 @@ h1 {
 }
 
 #section-7 .bottom-container {
-    display: flex;
-    width: 100%;
     height: 30%;
     justify-content: space-evenly;
 }
@@ -498,18 +488,7 @@ h1 {
     padding-right: 25px;
 }
 
-
 #section-7 .bottom-container .presentation:nth-child(1) {
     width: 40%;
     padding-right: 50px;
-}
-
-.copyright {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #455562;
-    padding: 15px;
-    color: white;
 }
