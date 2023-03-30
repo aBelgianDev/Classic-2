@@ -55,8 +55,8 @@
     animation-delay: 0.6s;
 }
 
-#section-3 .top-container .card .presentation.is-inview  {
-    animation-name: slide-up-to-down-apparition;
+#section-3 .top-container .card.is-inview  {
+    animation-name: slide-left-to-right-apparition;
     animation-duration: 2s;
 }
 
