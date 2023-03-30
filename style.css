@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    /* border: 1px solid rgb(184, 214, 135); */
+    border: 1px solid rgb(184, 214, 135);
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     list-style-type: none;
@@ -375,6 +375,8 @@ h1 {
     flex-direction: column;
     justify-content: center;
     margin-bottom: 15px;
+    min-width: 100%;
+    min-height: 215px;
 }
 
 #section-4 .container * {
